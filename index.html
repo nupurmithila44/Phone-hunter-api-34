@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hunter phone API</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <h2 class="text-2xl">Hunting Phone</h2>
+
+    </header>
+    <main class="container mx-auto">
+        <!-- search result -->
+        <section class=" bg-gray-400 p-4 m-4">
+            <input id="input-button" type="text" placeholder="search..." class="input input-bordered w-full max-w-xs" />
+            <button onclick="handleSearch()" class="btn btn-accent">search</button>
+            <!-- another search file  -->
+            <!-- <input id="input-buton2" type="text" placeholder="search..." class="input input-bordered w-full max-w-xs" />
+            <button onclick="handlSearch2()" class="btn btn-primary">Primary</button> -->
+        </section>
+
+
+
+        <section class="mr-auto px-10 pt-11">
+            <!-- spinner or loader  -->
+            <div id="loading-spinner" class="text-center my-40 hidden">
+                <span class="loading loading-spinner loading-lg"></span>
+            </div>
+
+            <!-- phones -->
+            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+            </div>
+            <!-- show all button  -->
+            <div id="show-all-container" class="hidden">
+                <button onclick="handleShowall()" class="btn btn-accent">Show all</button>
+            </div>
+
+        </section>
+
+        <!-- show details modal  -->
+        <section>
+            <!-- Open the modal using ID.showModal() method -->
+            <button class="btn" onclick="show_details_modal.showModal()">open modal</button>
+            <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box">
+                    <h3 class="font-bold text-lg">Hello!</h3>
+                    <p class="py-4">Press ESC key or click the button below to close</p>
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <!-- script -->
+    <script src="js/phone.js "></script>
+
+</body>
+
+</html>
